@@ -9,6 +9,7 @@ import {
   SidebarTrigger,
   useSidebar,
 } from "@/components/ui/sidebar";
+import Link from "next/link";
 
 export function TeamSwitcher({
   teams,
@@ -33,14 +34,16 @@ export function TeamSwitcher({
           className={`${
             !open && "flex-col items-start"
           } flex items-center gap-1 justify-between `}>
-          <SidebarMenuButton
-            size="lg"
-            className="data-[state=open]:bg-sidebar-accent aspect-square size-12 data-[state=open]:text-sidebar-accent-foreground">
-            <div className="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
-              <span className="font-lobster text-xl">U</span>
-            </div>
-          </SidebarMenuButton>
-          <div className={`flex justify-center items-center ${!open && "w-9"}`} >
+          <Link href={"/"}>
+            <SidebarMenuButton
+              size="lg"
+              className="data-[state=open]:bg-sidebar-accent aspect-square size-12 data-[state=open]:text-sidebar-accent-foreground">
+              <div className="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
+                <span className="font-lobster text-xl">U</span>
+              </div>
+            </SidebarMenuButton>
+          </Link>
+          <div className={`flex justify-center items-center ${!open && "w-9"}`}>
             <SidebarTrigger className="-ml-1" />
           </div>
         </div>

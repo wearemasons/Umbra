@@ -6,6 +6,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
+import Link from "next/link";
 import { ReactElement } from "react";
 
 export function NavMain({
@@ -24,11 +25,12 @@ export function NavMain({
       <SidebarMenu>
         {items.map((item, index) => (
           <SidebarMenuItem key={index}>
-            <SidebarMenuButton tooltip={item.title}>
-              {item.icon}
-              <span>{item.title}</span>
-              {/* <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" /> */}
-            </SidebarMenuButton>
+            <Link href={`${item.url}`}>
+              <SidebarMenuButton tooltip={item.title}>
+                {item.icon}
+                <span>{item.title}</span>
+              </SidebarMenuButton>
+            </Link>
           </SidebarMenuItem>
         ))}
       </SidebarMenu>

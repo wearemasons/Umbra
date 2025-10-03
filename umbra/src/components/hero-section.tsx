@@ -72,17 +72,7 @@ export default function HeroSection() {
                 className="mt-12">
                 <form action="" className="mx-auto max-w-sm">
                   <div className="flex justify-center py-4 bg-background has-[input:focus]:ring-muted relative items-center rounded-[calc(var(--radius)+0.5rem)] border pr-2 shadow shadow-zinc-950/5 has-[input:focus]:ring-2">
-                    {/* <Mail className="pointer-events-none absolute inset-y-0 left-4 my-auto size-4" />
-
-                                        <input
-                                            placeholder="Enter your email"
-                                            className="h-12 w-full bg-transparent pl-12 focus:outline-none"
-                                            type="email"
-                                        />
-
-                                        <div className="md:pr-1.5 lg:pr-0">
-                                        </div> */}
-                    <Link href={"/Bot"}>
+                    <Link href={"/chat"}>
                       <Button
                         // aria-label="submit"
                         size="sm"

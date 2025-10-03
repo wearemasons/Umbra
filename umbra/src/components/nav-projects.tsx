@@ -1,7 +1,5 @@
 "use client";
-import {
-  ChevronRight,
-} from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import {
   SidebarGroup,
   SidebarMenuButton,
@@ -15,22 +13,23 @@ import {
   CollapsibleTrigger,
   CollapsibleContent,
 } from "@radix-ui/react-collapsible";
+import Link from "next/link";
 
 export function NavProjects() {
   const chats = [
-     {
-          id:"1",
-          title:"To the moon"
-     },
-     {
-          id:"2",
-          title:"Water on Mars"
-     },
-     {
-          id:"3",
-          title:"Billions of Stars"
-     },
-  ]
+    {
+      id: "1",
+      title: "To the moon",
+    },
+    {
+      id: "2",
+      title: "Water on Mars",
+    },
+    {
+      id: "3",
+      title: "Billions of Stars",
+    },
+  ];
 
   return (
     <SidebarGroup className="group-data-[collapsible=icon]:hidden">
@@ -45,14 +44,14 @@ export function NavProjects() {
           <CollapsibleContent>
             <SidebarMenuSub>
               {chats.map((chat) => (
-             <SidebarMenuSubItem key={chat.id}>
-               <SidebarMenuSubButton asChild>
-                 <a href={"#"}>
-                   <span>{chat.title}</span>
-                 </a>
-               </SidebarMenuSubButton>
-             </SidebarMenuSubItem>
-           ))}
+                <SidebarMenuSubItem key={chat.id}>
+                  <SidebarMenuSubButton asChild>
+                    <Link href={`/chat/${chat.id}`}>
+                      <span>{chat.title}</span>
+                    </Link>
+                  </SidebarMenuSubButton>
+                </SidebarMenuSubItem>
+              ))}
             </SidebarMenuSub>
           </CollapsibleContent>
         </SidebarMenuItem>

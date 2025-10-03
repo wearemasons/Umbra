@@ -49,21 +49,20 @@ const data = {
   navMain: [
     {
       title: "New chat",
-      url: "#",
+      url: "/chat",
       icon: <Plus />,
     },
     {
       title: "Graph",
-      url: "#",
-      icon: <PiGraphLight/>,
+      url: "/graph",
+      icon: <PiGraphLight />,
     },
     {
       title: "Researches",
-      url: "#",
+      url: "/researches",
       icon: <BookOpen />,
     },
   ],
-
 };
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
@@ -74,7 +73,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavProjects/>
+        <NavProjects />
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={data.user} />
