@@ -3,7 +3,7 @@ import { action, internalMutation } from "./_generated/server";
 import { api, internal } from "./_generated/api";
 import { callGemini } from "./lib/gemini";
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { Doc } from "./_generated/dataModel";
+import { Doc, Id } from "./_generated/dataModel";
 
 const apiKey = process.env.GEMINI_API_KEY;
 if (!apiKey) {
@@ -37,7 +37,9 @@ export const semanticSearch = action({
       limit: 16,
       // Note: Vector search filters work differently in Convex
       // We'll filter the results after retrieval instead
-    });
+    }) as Array<
+      { _id: Id<"embeddings">; _score: number; section: string; publicationId: Id<"publications"> }
+    >;
 
     // 3. Filter for abstract sections and get unique publication IDs
     const abstractResults = searchResults.filter(
@@ -49,20 +51,20 @@ export const semanticSearch = action({
     const publications = await Promise.all(
       uniquePublicationIds.map(async (id) => {
         try {
-          return await ctx.db.get(id);
+          return await ctx.db.get(id); //======================
         } catch {
           return null;
         }
       }),
     );
     const validPublications = publications.filter(
-      (p): p is Doc<"publications"> => p !== null,
+      (p:Doc<"publications">) => p !== null,
     );
 
     // 4. Prepare the context for the Gemini chat model.
     const context = validPublications
       .map(
-        (pub, i) =>
+        (pub:Doc<"publications">, i:number) =>
           `[Doc ${i + 1}] Title: ${pub.title}\nAbstract: ${pub.abstract}`,
       )
       .join("\n\n");
@@ -76,7 +78,7 @@ export const semanticSearch = action({
     });
 
     // 6. Store the query and its answer.
-    await ctx.runMutation(internal.search.storeSearchResult, {
+    await ctx.runMutation(internal.search.saveSearchQuery, {
       query,
       synthesizedAnswer,
     });
