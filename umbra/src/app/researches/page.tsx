@@ -197,7 +197,7 @@ export default function ResearchesPage() {
     <AppLayout>
       <div className="flex-1 flex flex-col h-full">
         {/* Search and Filters Section - Fixed at top */}
-        <div className="p-6 border-b bg-white">
+        <div className="p-6 border-b ">
           <div className="space-y-4">
             <div className="flex flex-col sm:flex-row gap-4">
               {/* Search Input */}

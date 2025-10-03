@@ -158,3 +158,29 @@ export const getKnowledgeGraph = query({
     return { nodes, edges };
   },
 });
+
+/**
+ * Retrieves the full knowledge graph with publication dates for temporal visualization.
+ */
+export const getKnowledgeGraphWithTemporalData = query({
+  handler: async (ctx) => {
+    const nodes = await ctx.db.query("knowledgeGraphNodes").collect();
+    const edges = await ctx.db.query("knowledgeGraphEdges").collect();
+    
+    // Get publication dates for temporal filtering
+    const publicationIds = new Set<Id<"publications">>();
+    edges.forEach(edge => {
+      edge.publicationIds.forEach(pubId => publicationIds.add(pubId));
+    });
+    
+    const publicationDates: Record<string, string> = {};
+    for (const pubId of publicationIds) {
+      const pub = await ctx.db.get(pubId);
+      if (pub) {
+        publicationDates[pubId] = pub.publicationDate;
+      }
+    }
+    
+    return { nodes, edges, publicationDates };
+  },
+});

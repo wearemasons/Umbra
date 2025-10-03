@@ -1,10 +1,23 @@
-import React from 'react'
+'use client';
+
+import React from 'react';
 import { AppLayout } from '@/components/app-layout';
+import GraphClient from './graph-client';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function GraphPage() {
   return (
     <AppLayout>
-      <div className="p-6">Graph</div>
+      <div className="p-6">
+        <Card className="h-[calc(100vh-120px)]">
+          <CardHeader>
+            <CardTitle>Knowledge Graph Visualization</CardTitle>
+          </CardHeader>
+          <CardContent className="h-[calc(100%-80px)]">
+            <GraphClient />
+          </CardContent>
+        </Card>
+      </div>
     </AppLayout>
-  )
+  );
 }
