@@ -1,8 +1,4 @@
 'use client';
-
-import React from 'react';
-import { useQuery } from 'convex/react';
-import { api } from '../../../convex/_generated/api';
 import ResearchPaperGraph from '@/components/graph/research-paper-graph';
 import { Skeleton } from '@/components/ui/skeleton';
 import { mockResearchPaperNodes, mockResearchPaperEdges } from '@/components/graph/research-paper-mock-data';

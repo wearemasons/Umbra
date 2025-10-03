@@ -1,6 +1,7 @@
-import { Id } from '@/convex/_generated/dataModel';
-
 // Mock data for knowledge graph visualization
+
+// Define basic Id type for mock data
+type Id<T extends string = string> = string & { __brand: T };
 
 export interface MockKnowledgeGraphNode {
   _id: Id<'knowledgeGraphNodes'>;

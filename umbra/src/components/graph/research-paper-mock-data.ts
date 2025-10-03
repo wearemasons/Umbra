@@ -1,4 +1,5 @@
-import { Id } from '../../../convex/_generated/dataModel';
+// Define basic Id type for mock data
+type Id<T extends string = string> = string & { __brand: T };
 
 // Define interfaces for research paper graph data
 export interface ResearchPaperNode {
@@ -164,7 +165,7 @@ export const mockResearchPaperEdges: ResearchPaperEdge[] = [
     strength: 0.80
   },
   {
-    _id: 'edge6' as Id<'knowledgeGraphNodes'>,
+    _id: 'edge6' as Id<'knowledgeGraphEdges'>,
     sourceNodeId: 'paper8' as Id<'knowledgeGraphNodes'>,
     targetNodeId: 'paper4' as Id<'knowledgeGraphNodes'>,
     relationshipType: 'builds-on',

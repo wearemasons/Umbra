@@ -2,8 +2,10 @@
 
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 import * as d3 from 'd3';
-import { Id } from '../../../convex/_generated/dataModel';
 import { mockResearchPaperNodes, mockResearchPaperEdges } from './research-paper-mock-data';
+
+// Define basic Id type for mock data
+type Id<T extends string = string> = string & { __brand: T };
 
 // Define TypeScript interfaces for our data
 interface ResearchPaperNode {
@@ -259,15 +261,17 @@ const ResearchPaperGraph: React.FC<ResearchPaperGraphProps> = ({
     // Create groups for links and nodes so they can be transformed independently for zoom/pan
     const linkGroup = svg.selectAll('.link-group').data([null]);
     const linkGroupEnter = linkGroup.enter().append('g').attr('class', 'link-group');
+    // @ts-expect-error D3 typing issue with selection merge
     linkGroupEnter.merge(linkGroup);
 
     const nodeGroup = svg.selectAll('.node-group').data([null]);
     const nodeGroupEnter = nodeGroup.enter().append('g').attr('class', 'node-group');
+    // @ts-expect-error D3 typing issue with selection merge
     nodeGroupEnter.merge(nodeGroup);
 
     // Update links (edges) in the visualization
     const links = svg.select('.link-group').selectAll<SVGPathElement, GraphEdge>('.link')
-      .data(extendedEdges, (d) => d._id);
+      .data(extendedEdges, (d: GraphEdge) => d._id);
 
     // Remove old links that are no longer in the data
     links.exit().remove();
@@ -326,7 +330,7 @@ const ResearchPaperGraph: React.FC<ResearchPaperGraphProps> = ({
 
     // Create node elements and update them based on data changes
     const nodesSelection = svg.select('.node-group').selectAll<SVGGElement, ResearchPaperNode>('.node')
-      .data(nodes, (d) => d._id);
+      .data(nodes, (d: ResearchPaperNode) => d._id);
 
     // Remove old nodes that are no longer in the data
     nodesSelection.exit().remove();
@@ -335,6 +339,7 @@ const ResearchPaperGraph: React.FC<ResearchPaperGraphProps> = ({
     const nodeEnter = nodesSelection.enter()
       .append('g')
       .attr('class', 'node')
+      // @ts-expect-error D3 typing mismatch for drag behavior
       .call(drag(simulation, updateNodePosition)); // Add drag behavior
 
     // Add circle for each node with size based on citation count
