@@ -3,22 +3,15 @@
 import React from 'react';
 import { useQuery } from 'convex/react';
 import { api } from '../../../convex/_generated/api';
-import ForceDirectedGraph from '@/components/graph/force-directed-graph';
+import ResearchPaperGraph from '@/components/graph/research-paper-graph';
 import { Skeleton } from '@/components/ui/skeleton';
-import { mockNodes, mockEdges, mockPublicationDates } from '@/components/graph/mock-data';
+import { mockResearchPaperNodes, mockResearchPaperEdges } from '@/components/graph/research-paper-mock-data';
 
 const GraphClient = () => {
-  // Fix: useQuery returns data directly or undefined, not an object with properties
-  const data = useQuery(api.knowledgeGraph.getKnowledgeGraphWithTemporalData);
+  // For now, we'll use mock data for the research paper visualization
+  // In the future, you can fetch real research papers from your data source
+  const isLoading = false; // No loading state for mock data
   
-  const isLoading = data === undefined;
-  
-  // Use real data if available, otherwise use mock data
-  const hasRealData = data && data.nodes.length > 0 && data.edges.length > 0;
-  const displayNodes = hasRealData ? data.nodes : mockNodes;
-  const displayEdges = hasRealData ? data.edges : mockEdges;
-  const displayPublications = hasRealData ? data.publicationDates : mockPublicationDates;
-
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -30,10 +23,9 @@ const GraphClient = () => {
 
   return (
     <div className="w-full h-full">
-      <ForceDirectedGraph 
-        nodes={displayNodes} 
-        edges={displayEdges} 
-        publications={displayPublications} 
+      <ResearchPaperGraph 
+        nodes={mockResearchPaperNodes} 
+        edges={mockResearchPaperEdges} 
       />
     </div>
   );
