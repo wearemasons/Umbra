@@ -4,16 +4,9 @@ import * as React from "react";
 import {
   AudioWaveform,
   BookOpen,
-  Bot,
   Command,
-  Frame,
   GalleryVerticalEnd,
-  Map,
-  NotepadText,
-  PieChart,
   Plus,
-  Settings2,
-  SquareTerminal,
 } from "lucide-react";
 import { PiGraphLight } from "react-icons/pi";
 

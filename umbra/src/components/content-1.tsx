@@ -15,7 +15,7 @@ export default function ContentSection() {
 
                     <div className="relative space-y-4">
                         <p className="text-muted-foreground">
-                            Umbra's interactive graph allows researchers to easily explore relationships between studies, discover hidden patterns, and build a deeper understanding of the scientific landscape.
+                            Umbra{`'`}s interactive graph allows researchers to easily explore relationships between studies, discover hidden patterns, and build a deeper understanding of the scientific landscape.
                         </p>
 
                         <div className="pt-6">

@@ -3,6 +3,7 @@ import { MarkdownContent } from "@/components/ui/markdown-content";
 import { type VariantProps, cva } from "class-variance-authority";
 import { SparklesIcon, UserIcon } from "lucide-react";
 import React, { type ReactNode } from "react";
+import Image from 'next/image';
 
 const chatMessageVariants = cva("flex gap-4 w-full", {
 	variants: {
@@ -119,10 +120,12 @@ const ChatMessageAvatar = React.forwardRef<
 			{...props}
 		>
 			{imageSrc ? (
-				<img
+				<Image
 					src={imageSrc}
 					alt="Avatar"
 					className="h-full w-full object-cover"
+					width={32}
+					height={32}
 				/>
 			) : (
 				<div className="translate-y-px [&_svg]:size-4 [&_svg]:shrink-0">

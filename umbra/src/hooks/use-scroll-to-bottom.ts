@@ -9,11 +9,11 @@ import {
 } from "react";
 
 export function useScrollToBottom<T extends HTMLElement>(): [
-	RefObject<T>,
+	RefObject<T | null>,
 	boolean,
 	() => void,
 ] {
-	const containerRef = useRef<T>(null);
+	const containerRef = useRef<T | null>(null);
 	const [showScrollButton, setShowScrollButton] = useState(false);
 	const [shouldAutoScroll, setShouldAutoScroll] = useState(true);
 	const isUserScrolling = useRef(false);

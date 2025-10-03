@@ -37,7 +37,7 @@ export default function FAQsTwo() {
             <div className="mx-auto max-w-5xl px-4 md:px-6">
                 <div className="mx-auto max-w-xl text-center">
                     <h2 className="text-balance text-3xl font-bold md:text-4xl lg:text-5xl">Questions About Umbra?</h2>
-                    <p className="text-muted-foreground mt-4 text-balance">Find answers to common questions about Umbra's features, data processing, and how it can benefit your research.</p>
+                    <p className="text-muted-foreground mt-4 text-balance">Find answers to common questions about Umbra{`'`}s features, data processing, and how it can benefit your research.</p>
                 </div>
 
                 <div className="mx-auto mt-12 max-w-xl">

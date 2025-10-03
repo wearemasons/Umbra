@@ -8,6 +8,12 @@ import remarkGfm from "remark-gfm";
 const DEFAULT_PRE_BLOCK_CLASS =
 	"my-4 overflow-x-auto w-fit rounded-xl bg-zinc-950 text-zinc-50 dark:bg-zinc-900 border border-border p-4";
 
+interface ReactElementWithChildren {
+  props: {
+    children?: React.ReactNode;
+  };
+}
+
 const extractTextContent = (node: React.ReactNode): string => {
 	if (typeof node === "string") {
 		return node;
@@ -16,7 +22,8 @@ const extractTextContent = (node: React.ReactNode): string => {
 		return node.map(extractTextContent).join("");
 	}
 	if (isValidElement(node)) {
-		return extractTextContent(node.props.children);
+		const element = node as React.ReactElement & ReactElementWithChildren;
+		return extractTextContent(element.props.children);
 	}
 	return "";
 };
@@ -238,11 +245,12 @@ const components: Partial<Components> = {
 			{children}
 		</td>
 	),
-	img: ({ alt, ...props }: React.ImgHTMLAttributes<HTMLImageElement>) => (
-		// biome-ignore lint/a11y/useAltText: alt is not required
-		<img className="rounded-md" alt={alt} {...props} />
-	),
-	code: ({ children, node, className, ...props }) => {
+	img: ({ alt, src, title, ...props }: React.ImgHTMLAttributes<HTMLImageElement>) => {
+		// For dynamic images (from markdown content), we should use standard img tags
+		// Next.js Image requires static imports or configured remote patterns
+		return <img className="rounded-md" src={src} alt={alt} title={title} {...props} />;
+	},
+	code: ({ children, className, ...props }) => {
 		const match = /language-(\w+)/.exec(className || "");
 		if (match) {
 			return (
