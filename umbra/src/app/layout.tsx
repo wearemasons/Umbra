@@ -1,21 +1,9 @@
 import type { Metadata } from "next";
-import {
-  ClerkProvider,
-} from "@clerk/nextjs";
-import { Geist, Geist_Mono, Lobster } from "next/font/google";
+import { ClerkProvider } from "@clerk/nextjs";
+import { Lobster } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "sonner";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const lobster = Lobster({
   variable: "--font-lobster",
@@ -37,13 +25,8 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} ${lobster.variable} antialiased`}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange>
+        <body className={`${lobster.variable} antialiased`}>
+          <ThemeProvider defaultTheme="system">
             {children}
             <Toaster />
           </ThemeProvider>
