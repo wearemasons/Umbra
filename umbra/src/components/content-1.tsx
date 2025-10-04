@@ -12,7 +12,7 @@ export default function ContentSection1() {
             <div className="bg-linear-to-b aspect-76/59 relative rounded-2xl from-zinc-300 to-transparent p-px dark:from-zinc-700">
               <Image
                 src="/editor.png"
-                className="hidden rounded-[15px] dark:block transition-transform duration-300 hover:scale-125"
+                className="rounded-[15px] transition-transform duration-300 hover:scale-125"
                 alt="Umbra's Research Editor"
                 width={1207}
                 height={929}
