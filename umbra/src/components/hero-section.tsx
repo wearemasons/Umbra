@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { TextEffect } from "@/components/ui/text-effect";
 import { AnimatedGroup } from "@/components/ui/animated-group";
 import { HeroHeader } from "./header";
-import { LogoCloud } from "./logo-cloud";
 import Link from "next/link";
 
 const transitionVariants = {
