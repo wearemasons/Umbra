@@ -33,14 +33,23 @@ export default function HeroSection() {
       <HeroHeader />
 
       <main className="overflow-hidden [--color-primary-foreground:var(--color-white)] [--color-primary:var(--color-green-600)]">
-        <section>
-          <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-32 lg:pt-48">
-            <div className="relative z-10 mx-auto max-w-4xl text-center">
+        <section className="relative">
+          {/* Background image with blur */}
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: "url(/umbra.png)" }}
+          >
+            <div className="absolute inset-0 backdrop-blur-sm bg-black/40"></div>
+          </div>
+
+          <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-48 lg:pt-64">
+            <div className="relative z-10 mx-auto max-w-4xl text-center mt-16 lg:mt-24">
               <TextEffect
                 preset="fade-in-blur"
                 speedSegment={0.3}
                 as="h1"
-                className="text-balance text-5xl font-medium md:text-6xl">
+                className="text-balance text-5xl font-medium md:text-6xl text-white drop-shadow-lg"
+              >
                 Unlock the power of research with Umbra
               </TextEffect>
               <TextEffect
@@ -49,7 +58,8 @@ export default function HeroSection() {
                 speedSegment={0.3}
                 delay={0.5}
                 as="p"
-                className="mx-auto mt-6 max-w-2xl text-pretty text-lg">
+                className="mx-auto mt-6 max-w-2xl text-pretty text-lg text-white/90 drop-shadow-md"
+              >
                 Umbra is a research knowledge management platform that collects,
                 summarizes, and organizes scientific papers into a structured
                 database. Each research paper is automatically processed using
@@ -69,14 +79,16 @@ export default function HeroSection() {
                   },
                   ...transitionVariants,
                 }}
-                className="mt-12">
+                className="mt-12"
+              >
                 <form action="" className="mx-auto max-w-sm">
-                  <div className="flex justify-center py-4 bg-background has-[input:focus]:ring-muted relative items-center rounded-[calc(var(--radius)+0.5rem)] border pr-2 shadow shadow-zinc-950/5 has-[input:focus]:ring-2">
+                  <div className="flex justify-center py-4 bg-background/90 backdrop-blur-sm has-[input:focus]:ring-muted relative items-center rounded-[calc(var(--radius)+0.5rem)] border pr-2 shadow-lg has-[input:focus]:ring-2">
                     <Link href={"/chat"}>
                       <Button
                         // aria-label="submit"
                         size="sm"
-                        className="rounded-(--radius)">
+                        className="rounded-(--radius)"
+                      >
                         <span className="hidden md:block">Get Started</span>
                         <SendHorizonal
                           className="relative mx-auto size-5 md:hidden"
@@ -89,7 +101,8 @@ export default function HeroSection() {
 
                 <div
                   aria-hidden
-                  className="bg-radial from-primary/50 dark:from-primary/25 relative mx-auto mt-32 max-w-2xl to-transparent to-55% text-left">
+                  className="bg-radial from-primary/50 dark:from-primary/25 relative mx-auto mt-32 max-w-2xl to-transparent to-55% text-left"
+                >
                   <div className="bg-background border-border/50 absolute inset-0 mx-auto w-80 -translate-x-3 -translate-y-12 rounded-[2rem] border p-2 [mask-image:linear-gradient(to_bottom,#000_50%,transparent_90%)] sm:-translate-x-6">
                     <div className="relative h-96 overflow-hidden rounded-[1.5rem] border p-2 pb-12 before:absolute before:inset-0 before:bg-[repeating-linear-gradient(-45deg,var(--color-border),var(--color-border)_1px,transparent_1px,transparent_6px)] before:opacity-50"></div>
                   </div>
@@ -121,14 +134,17 @@ const AppComponent = () => {
           xmlns="http://www.w3.org/2000/svg"
           width="1em"
           height="1em"
-          viewBox="0 0 32 32">
+          viewBox="0 0 32 32"
+        >
           <g fill="none">
             <path
               fill="#ff6723"
-              d="M26 19.34c0 6.1-5.05 11.005-11.15 10.641c-6.269-.374-10.56-6.403-9.752-12.705c.489-3.833 2.286-7.12 4.242-9.67c.34-.445.689 3.136 1.038 2.742c.35-.405 3.594-6.019 4.722-7.991a.694.694 0 0 1 1.028-.213C18.394 3.854 26 10.277 26 19.34"></path>
+              d="M26 19.34c0 6.1-5.05 11.005-11.15 10.641c-6.269-.374-10.56-6.403-9.752-12.705c.489-3.833 2.286-7.12 4.242-9.67c.34-.445.689 3.136 1.038 2.742c.35-.405 3.594-6.019 4.722-7.991a.694.694 0 0 1 1.028-.213C18.394 3.854 26 10.277 26 19.34"
+            ></path>
             <path
               fill="#ffb02e"
-              d="M23 21.851c0 4.042-3.519 7.291-7.799 7.144c-4.62-.156-7.788-4.384-7.11-8.739C9.07 14.012 15.48 10 15.48 10S23 14.707 23 21.851"></path>
+              d="M23 21.851c0 4.042-3.519 7.291-7.799 7.144c-4.62-.156-7.788-4.384-7.11-8.739C9.07 14.012 15.48 10 15.48 10S23 14.707 23 21.851"
+            ></path>
           </g>
         </svg>
         <div className="text-sm font-medium">Steps</div>
