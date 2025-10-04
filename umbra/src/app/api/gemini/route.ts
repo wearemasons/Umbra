@@ -1,6 +1,8 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { NextRequest, NextResponse } from "next/server";
 import Papa from "papaparse";
+import fs from "fs";
+import path from "path";
 
 // Define the structure of each row in the CSV
 interface CsvRow {
@@ -20,9 +22,6 @@ async function fetchAndParseCsv(): Promise<CsvRow[]> {
 
   try {
     // Read the CSV file directly from the public directory
-    const fs = require("fs");
-    const path = require("path");
-
     const csvPath = path.join(process.cwd(), "public", "sources.csv");
     const csvText = fs.readFileSync(csvPath, "utf8");
 

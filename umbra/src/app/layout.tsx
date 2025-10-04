@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ClerkProvider } from "@clerk/nextjs";
+
 import { Lobster } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -23,15 +23,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body className={`${lobster.variable} antialiased`}>
-          <ThemeProvider defaultTheme="system">
-            {children}
-            <Toaster />
-          </ThemeProvider>
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang="en">
+      <body className={`${lobster.variable} antialiased`}>
+        <ThemeProvider defaultTheme="system">
+          {children}
+          <Toaster />
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }
