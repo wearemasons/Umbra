@@ -1,0 +1,14 @@
+D:\C# Projects\Urban.api\DAL\bin\Debug\net8.0\DAL.deps.json
+D:\C# Projects\Urban.api\DAL\bin\Debug\net8.0\DAL.runtimeconfig.json
+D:\C# Projects\Urban.api\DAL\bin\Debug\net8.0\DAL.dll
+D:\C# Projects\Urban.api\DAL\bin\Debug\net8.0\DAL.pdb
+D:\C# Projects\Urban.api\DAL\obj\Debug\net8.0\DAL.csproj.AssemblyReference.cache
+D:\C# Projects\Urban.api\DAL\obj\Debug\net8.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\C# Projects\Urban.api\DAL\obj\Debug\net8.0\DAL.AssemblyInfoInputs.cache
+D:\C# Projects\Urban.api\DAL\obj\Debug\net8.0\DAL.AssemblyInfo.cs
+D:\C# Projects\Urban.api\DAL\obj\Debug\net8.0\DAL.csproj.CoreCompileInputs.cache
+D:\C# Projects\Urban.api\DAL\obj\Debug\net8.0\DAL.dll
+D:\C# Projects\Urban.api\DAL\obj\Debug\net8.0\refint\DAL.dll
+D:\C# Projects\Urban.api\DAL\obj\Debug\net8.0\DAL.pdb
+D:\C# Projects\Urban.api\DAL\obj\Debug\net8.0\DAL.genruntimeconfig.cache
+D:\C# Projects\Urban.api\DAL\obj\Debug\net8.0\ref\DAL.dll

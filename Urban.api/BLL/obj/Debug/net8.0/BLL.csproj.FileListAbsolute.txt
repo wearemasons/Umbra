@@ -1,0 +1,15 @@
+D:\C# Projects\Urban.api\BLL\bin\Debug\net8.0\BLL.deps.json
+D:\C# Projects\Urban.api\BLL\bin\Debug\net8.0\BLL.dll
+D:\C# Projects\Urban.api\BLL\bin\Debug\net8.0\BLL.pdb
+D:\C# Projects\Urban.api\BLL\bin\Debug\net8.0\DAL.dll
+D:\C# Projects\Urban.api\BLL\bin\Debug\net8.0\DAL.pdb
+D:\C# Projects\Urban.api\BLL\obj\Debug\net8.0\BLL.csproj.AssemblyReference.cache
+D:\C# Projects\Urban.api\BLL\obj\Debug\net8.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\C# Projects\Urban.api\BLL\obj\Debug\net8.0\BLL.AssemblyInfoInputs.cache
+D:\C# Projects\Urban.api\BLL\obj\Debug\net8.0\BLL.AssemblyInfo.cs
+D:\C# Projects\Urban.api\BLL\obj\Debug\net8.0\BLL.csproj.CoreCompileInputs.cache
+D:\C# Projects\Urban.api\BLL\obj\Debug\net8.0\BLL.csproj.Up2Date
+D:\C# Projects\Urban.api\BLL\obj\Debug\net8.0\BLL.dll
+D:\C# Projects\Urban.api\BLL\obj\Debug\net8.0\refint\BLL.dll
+D:\C# Projects\Urban.api\BLL\obj\Debug\net8.0\BLL.pdb
+D:\C# Projects\Urban.api\BLL\obj\Debug\net8.0\ref\BLL.dll
