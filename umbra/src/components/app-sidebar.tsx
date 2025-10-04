@@ -6,6 +6,7 @@ import {
   BookOpen,
   Command,
   GalleryVerticalEnd,
+  NotebookPen,
   Plus,
 } from "lucide-react";
 import { PiGraphLight } from "react-icons/pi";
@@ -48,19 +49,24 @@ const data = {
   ],
   navMain: [
     {
-      title: "New chat",
+      title: "New Chat",
       url: "/chat",
       icon: <Plus />,
-    },
-    {
-      title: "Graph",
-      url: "/graph",
-      icon: <PiGraphLight />,
     },
     {
       title: "Researches",
       url: "/researches",
       icon: <BookOpen />,
+    },
+    {
+      title: "Text Editor",
+      url: "/text-editor",
+      icon: <NotebookPen />,
+    },
+    {
+      title: "Graph",
+      url: "/graph",
+      icon: <PiGraphLight />,
     },
   ],
 };

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { AppLayout } from "@/components/app-layout";
+
 import {
   ChatInput,
   ChatInputTextArea,
@@ -13,8 +14,16 @@ import {
 } from "@/components/ui/chat-message";
 import { ChatMessageArea } from "@/components/ui/chat-message-area";
 import { toast } from "sonner";
+type PageProps = {
+  params: Promise<{ id: string }>;
+};
+// eslint-disable-next-line @next/next/no-async-client-component
+export default async function ChatIdPage({ params }: PageProps) {
+  const { id } = await params;
+  return <ChatComponent id={id} />;
+}
 
-export default function ChatIdPage() {
+const ChatComponent = ({ id }: { id: string }) => {
   const [value, setValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
@@ -109,7 +118,7 @@ export default function ChatIdPage() {
       <div className="flex h-screen flex-col">
         {/* Header */}
         <div className="flex-shrink-0 px-4 py-4 shadow-lg dark:shadow-white/10">
-          <h1 className="text-2xl font-bold">Title...</h1>
+          <h1 className="text-2xl font-bold">id:{id}</h1>
         </div>
 
         {/* Messages Area - flex-1 allows it to grow and overflow-y-auto enables scrolling */}
@@ -151,4 +160,4 @@ export default function ChatIdPage() {
       </div>
     </AppLayout>
   );
-}
+};
