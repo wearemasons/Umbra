@@ -8,7 +8,7 @@ export const Logo = ({
   uniColor?: boolean;
 }) => {
   return (
-    <span className="font-lobster text-2xl select-none text-foreground text-shadow-white">
+    <span className="font-lobster text-2xl select-none  text-shadow-white text-white">
       Umbra
     </span>
   );
