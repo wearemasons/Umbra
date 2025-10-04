@@ -9,11 +9,11 @@ export default function GraphPage() {
   return (
     <AppLayout>
       <div className="p-6">
-        <Card className="h-[calc(100vh-120px)]">
+        <Card className="h-[calc(100vh-60px)]">
           <CardHeader>
             <CardTitle>Knowledge Graph Visualization</CardTitle>
           </CardHeader>
-          <CardContent className="h-[calc(100%-80px)]">
+          <CardContent className="h-[calc(100%-50px)]">
             <GraphClient />
           </CardContent>
         </Card>
