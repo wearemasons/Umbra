@@ -25,10 +25,10 @@ export default function LoginPage() {
         <div className="p-8 pb-6">
           <div>
             <Link href="/" aria-label="go home">
-              <LogoIcon />
+              <span className="font-lobster text-2xl select-none">Umbra</span>
             </Link>
             <h1 className="mb-1 mt-4 text-xl font-semibold">
-              Create a Tailark Account
+              Create an Account
             </h1>
             <p className="text-sm">Welcome! Create an account to get started</p>
           </div>
@@ -151,7 +151,7 @@ export default function LoginPage() {
           <p className="text-accent-foreground text-center text-sm">
             Have an account ?
             <Button asChild variant="link" className="px-2">
-              <Link href="#">Sign In</Link>
+              <Link href="/sign-in">Sign In</Link>
             </Button>
           </p>
         </div>
