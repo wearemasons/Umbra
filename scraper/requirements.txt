@@ -1,0 +1,9 @@
+pandas>=1.5.0
+requests>=2.31.0
+httpx>=0.25.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+convex>=0.6.0
+google-generativeai>=0.3.0
+python-dotenv>=1.0.0
+tqdm>=4.65.0
