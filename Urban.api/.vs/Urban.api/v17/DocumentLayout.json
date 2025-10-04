@@ -1,0 +1,159 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\C# Projects\\Urban.api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{774C1B02-443B-49F7-B140-DBFF44204CA2}|Urban.api\\Urban.api.csproj|d:\\c# projects\\urban.api\\urban.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{774C1B02-443B-49F7-B140-DBFF44204CA2}|Urban.api\\Urban.api.csproj|solutionrelative:urban.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C955997-A8ED-4949-A985-DC9591671725}|DAL\\DAL.csproj|d:\\c# projects\\urban.api\\dal\\models\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C955997-A8ED-4949-A985-DC9591671725}|DAL\\DAL.csproj|solutionrelative:dal\\models\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{774C1B02-443B-49F7-B140-DBFF44204CA2}|Urban.api\\Urban.api.csproj|d:\\c# projects\\urban.api\\urban.api\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{774C1B02-443B-49F7-B140-DBFF44204CA2}|Urban.api\\Urban.api.csproj|solutionrelative:urban.api\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C955997-A8ED-4949-A985-DC9591671725}|DAL\\DAL.csproj|d:\\c# projects\\urban.api\\dal\\data\\contexts\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C955997-A8ED-4949-A985-DC9591671725}|DAL\\DAL.csproj|solutionrelative:dal\\data\\contexts\\context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{774C1B02-443B-49F7-B140-DBFF44204CA2}|Urban.api\\Urban.api.csproj|d:\\c# projects\\urban.api\\urban.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{774C1B02-443B-49F7-B140-DBFF44204CA2}|Urban.api\\Urban.api.csproj|solutionrelative:urban.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC33299A-1E11-4D45-8BA9-F1F6A0623A4B}|BLL\\BLL.csproj|d:\\c# projects\\urban.api\\bll\\services\\messageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC33299A-1E11-4D45-8BA9-F1F6A0623A4B}|BLL\\BLL.csproj|solutionrelative:bll\\services\\messageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC33299A-1E11-4D45-8BA9-F1F6A0623A4B}|BLL\\BLL.csproj|d:\\c# projects\\urban.api\\bll\\services\\imessageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC33299A-1E11-4D45-8BA9-F1F6A0623A4B}|BLL\\BLL.csproj|solutionrelative:bll\\services\\imessageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{774C1B02-443B-49F7-B140-DBFF44204CA2}|Urban.api\\Urban.api.csproj|d:\\c# projects\\urban.api\\urban.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{774C1B02-443B-49F7-B140-DBFF44204CA2}|Urban.api\\Urban.api.csproj|solutionrelative:urban.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 375,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\C# Projects\\Urban.api\\Urban.api\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Urban.api\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\C# Projects\\Urban.api\\Urban.api\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Urban.api\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAswHQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T00:56:09.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IMessageService.cs",
+              "DocumentMoniker": "D:\\C# Projects\\Urban.api\\BLL\\Services\\IMessageService.cs",
+              "RelativeDocumentMoniker": "BLL\\Services\\IMessageService.cs",
+              "ToolTip": "D:\\C# Projects\\Urban.api\\BLL\\Services\\IMessageService.cs",
+              "RelativeToolTip": "BLL\\Services\\IMessageService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T22:27:32.055Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MessageService.cs",
+              "DocumentMoniker": "D:\\C# Projects\\Urban.api\\BLL\\Services\\MessageService.cs",
+              "RelativeDocumentMoniker": "BLL\\Services\\MessageService.cs",
+              "ToolTip": "D:\\C# Projects\\Urban.api\\BLL\\Services\\MessageService.cs",
+              "RelativeToolTip": "BLL\\Services\\MessageService.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAQwD8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T22:27:40.242Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\C# Projects\\Urban.api\\Urban.api\\Program.cs",
+              "RelativeDocumentMoniker": "Urban.api\\Program.cs",
+              "ToolTip": "D:\\C# Projects\\Urban.api\\Urban.api\\Program.cs",
+              "RelativeToolTip": "Urban.api\\Program.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAIAxwF0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T22:26:43.428Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ChatController.cs",
+              "DocumentMoniker": "D:\\C# Projects\\Urban.api\\Urban.api\\Controllers\\ChatController.cs",
+              "RelativeDocumentMoniker": "Urban.api\\Controllers\\ChatController.cs",
+              "ToolTip": "D:\\C# Projects\\Urban.api\\Urban.api\\Controllers\\ChatController.cs",
+              "RelativeToolTip": "Urban.api\\Controllers\\ChatController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAnwJUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T22:25:37.67Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\C# Projects\\Urban.api\\Urban.api\\appsettings.json",
+              "RelativeDocumentMoniker": "Urban.api\\appsettings.json",
+              "ToolTip": "D:\\C# Projects\\Urban.api\\Urban.api\\appsettings.json",
+              "RelativeToolTip": "Urban.api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-03T22:21:26.486Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "context.cs",
+              "DocumentMoniker": "D:\\C# Projects\\Urban.api\\DAL\\Data\\Contexts\\context.cs",
+              "RelativeDocumentMoniker": "DAL\\Data\\Contexts\\context.cs",
+              "ToolTip": "D:\\C# Projects\\Urban.api\\DAL\\Data\\Contexts\\context.cs",
+              "RelativeToolTip": "DAL\\Data\\Contexts\\context.cs",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAxwHYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T21:07:36.955Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Models.cs",
+              "DocumentMoniker": "D:\\C# Projects\\Urban.api\\DAL\\Models\\Models.cs",
+              "RelativeDocumentMoniker": "DAL\\Models\\Models.cs",
+              "ToolTip": "D:\\C# Projects\\Urban.api\\DAL\\Models\\Models.cs",
+              "RelativeToolTip": "DAL\\Models\\Models.cs",
+              "ViewState": "AgIAAMgAAAAAAAAAAAAIwM8AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T21:04:14.175Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 292,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

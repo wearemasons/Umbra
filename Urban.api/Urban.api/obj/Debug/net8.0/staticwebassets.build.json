@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "aKUhJPz0KpK9xJ89xJkmDo8w/xfL86kVGqRBI4kotyc=",
+  "Source": "Urban.api",
+  "BasePath": "_content/Urban.api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
