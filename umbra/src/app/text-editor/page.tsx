@@ -76,10 +76,10 @@ export default function MarkdownEditorPage() {
 
   return (
     <AppLayout>
-      <div className="container mx-auto py-1 px-4 max-w-10xl">
+      <div className="w-full h-screen bg-white overflow-hidden">
         <Toaster />
-        <Card className="w-full">
-          <CardHeader>
+        <Card className="w-full h-full flex flex-col border-0 rounded-none">
+          <CardHeader className="shrink-0 px-6 py-4">
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
               <div>
                 <CardTitle className="text-2xl">
@@ -98,8 +98,8 @@ export default function MarkdownEditorPage() {
               </div>
             </div>
           </CardHeader>
-          <CardContent>
-            <div className="flex flex-wrap gap-4 mb-4">
+          <CardContent className="flex-1 flex flex-col min-h-0 overflow-hidden px-6 pb-6">
+            <div className="flex flex-wrap gap-4 mb-4 shrink-0">
               <Button variant="outline" size="sm" onClick={insertHeading}>
                 Heading
               </Button>
@@ -123,21 +123,20 @@ export default function MarkdownEditorPage() {
               </Button>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="space-y-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 flex-1 min-h-0 overflow-hidden">
+              <div className="space-y-2 flex flex-col h-full">
                 <Label>Editor</Label>
                 <Textarea
                   ref={textareaRef}
                   value={markdown}
                   onChange={(e) => setMarkdown(e.target.value)}
-                  rows={24}
-                  className="font-mono text-sm resize-none"
+                  className="font-mono text-sm resize-none flex-1 min-h-0"
                   placeholder="Enter your markdown here..."
                 />
               </div>
-              <div className="space-y-2">
+              <div className="space-y-2 w-full flex flex-col h-full">
                 <Label>Preview</Label>
-                <div className="border rounded-lg p-4 max-h-[500px] overflow-y-auto">
+                <div className="border rounded-lg p-4 overflow-y-auto flex-1 min-h-0">
                   <ReactMarkdown
                     remarkPlugins={[remarkGfm]}
                     components={{
@@ -159,9 +158,9 @@ export default function MarkdownEditorPage() {
                           {...props}
                         />
                       ),
-                      p: (props: React.HTMLAttributes<HTMLParagraphElement>) => (
-                        <p className="my-2 leading-relaxed" {...props} />
-                      ),
+                      p: (
+                        props: React.HTMLAttributes<HTMLParagraphElement>
+                      ) => <p className="my-2 leading-relaxed" {...props} />,
                       ul: (props: React.HTMLAttributes<HTMLUListElement>) => (
                         <ul
                           className="my-2 ml-6 list-disc space-y-1"
@@ -177,13 +176,22 @@ export default function MarkdownEditorPage() {
                       li: (props: React.HTMLAttributes<HTMLLIElement>) => (
                         <li className="ml-2" {...props} />
                       ),
-                      blockquote: (props: React.HTMLAttributes<HTMLElement>) => (
+                      blockquote: (
+                        props: React.HTMLAttributes<HTMLElement>
+                      ) => (
                         <blockquote
                           className="border-l-4 border-primary pl-4 py-1 my-2 italic text-muted-foreground"
                           {...props}
                         />
                       ),
-                      code({ inline, ...props }: { inline?: boolean; children?: React.ReactNode; className?: string }) {
+                      code({
+                        inline,
+                        ...props
+                      }: {
+                        inline?: boolean;
+                        children?: React.ReactNode;
+                        className?: string;
+                      }) {
                         if (inline) {
                           return (
                             <code
@@ -211,7 +219,7 @@ export default function MarkdownEditorPage() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-wrap gap-2 mt-4">
+            <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t">
               <Button onClick={handleSave}>
                 <Save className="h-4 w-4 mr-2" />
                 Save
