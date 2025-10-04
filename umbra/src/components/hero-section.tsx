@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { TextEffect } from "@/components/ui/text-effect";
 import { AnimatedGroup } from "@/components/ui/animated-group";
 import { HeroHeader } from "./header";
+import ParallaxContainer from "@/components/ui/parallax-container";
 import Link from "next/link";
 
 const transitionVariants = {
@@ -32,82 +33,81 @@ export default function HeroSection() {
       <HeroHeader />
 
       <main className="overflow-hidden [--color-primary-foreground:var(--color-white)] [--color-primary:var(--color-green-600)]">
-        <section className="relative min-h-screen">
-          {/* Background image with blur */}
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url(/umbra.png)" }}
-          >
-            <div className="absolute inset-0 backdrop-blur-sm bg-black/40"></div>
-          </div>
+        <ParallaxContainer
+          speed={0.3} // Background moves slower
+          className="relative"
+          backgroundUrl="/umbra.png">
+          <section className="relative min-h-screen">
+            {/* Background image with blur */}
+            {/* <div
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+              style={{ backgroundImage: "url(/umbra.png)" }}>
+              <div className="absolute inset-0 backdrop-blur-sm bg-black/40"></div>
+            </div> */}
 
-          <div className="relative mx-auto max-w-7xl px-6 pb-20 pt-48 lg:pt-64">
-            <div className="relative z-10 mx-auto max-w-4xl text-center mt-16 lg:mt-24">
-              <TextEffect
-                preset="fade-in-blur"
-                speedSegment={0.3}
-                as="h1"
-                className="text-balance text-4xl font-bold md:text-6xl text-white drop-shadow-lg"
-              >
-                The Knowledge Engine for Space Biology
-              </TextEffect>
-              <TextEffect
-                per="line"
-                preset="fade-in-blur"
-                speedSegment={0.3}
-                delay={0.5}
-                as="p"
-                className="mx-auto mt-6 max-w-2xl text-pretty text-lg text-white/90 drop-shadow-md"
-              >
-                Connecting 50 Years of Space Biology Research, From Fragmented
-                Papers to Connected Insights
-              </TextEffect>
+            <div className="relative mx-auto max-w-7xl px-6 pb-20 pt-48 lg:pt-64">
+              <div className="relative z-10 mx-auto max-w-4xl text-center mt-16 lg:mt-24">
+                <TextEffect
+                  preset="fade-in-blur"
+                  speedSegment={0.3}
+                  as="h1"
+                  className="text-balance text-4xl font-bold md:text-6xl text-white drop-shadow-lg">
+                  The Knowledge Engine for Space Biology
+                </TextEffect>
+                <TextEffect
+                  per="line"
+                  preset="fade-in-blur"
+                  speedSegment={0.3}
+                  delay={0.5}
+                  as="p"
+                  className="mx-auto mt-6 max-w-2xl text-pretty text-lg text-white/90 drop-shadow-md">
+                  Connecting 50 Years of Space Biology Research, From Fragmented
+                  Papers to Connected Insights
+                </TextEffect>
 
-              <AnimatedGroup
-                variants={{
-                  container: {
-                    visible: {
-                      transition: {
-                        staggerChildren: 0.05,
-                        delayChildren: 0.75,
+                <AnimatedGroup
+                  variants={{
+                    container: {
+                      visible: {
+                        transition: {
+                          staggerChildren: 0.05,
+                          delayChildren: 0.75,
+                        },
                       },
                     },
-                  },
-                  ...transitionVariants,
-                }}
-                className="mt-12"
-              >
-                <div className="mx-auto max-w-sm">
-                  <Button
-                    size="lg"
-                    className="w-full bg-primary/90 backdrop-blur-sm hover:bg-primary text-primary-foreground shadow-lg"
-                  >
-                    <Link href="/chat" className="flex flex-row">
-                      <span className="mr-2">Get Started</span>
-                      <SendHorizonal className="size-5" strokeWidth={2} />
-                    </Link>
-                  </Button>
-                </div>
+                    ...transitionVariants,
+                  }}
+                  className="mt-12">
+                  <div className="mx-auto max-w-sm">
+                    <Button
+                      size="lg"
+                      className="w-full bg-primary/90 backdrop-blur-sm hover:bg-primary text-primary-foreground shadow-lg">
+                      <Link href="/chat" className="flex flex-row">
+                        <span className="mr-2">Get Started</span>
+                        <SendHorizonal className="size-5" strokeWidth={2} />
+                      </Link>
+                    </Button>
+                  </div>
 
-                <div
-                  aria-hidden
-                  className="bg-radial from-primary/50 dark:from-primary/25 relative mx-auto mt-32 max-w-2xl to-transparent to-55% text-left"
-                >
-                  <div className="bg-background/80 border-border/50 absolute inset-0 mx-auto w-80 -translate-x-3 -translate-y-12 rounded-[2rem] border p-2 backdrop-blur-sm [mask-image:linear-gradient(to_bottom,#000_50%,transparent_90%)] sm:-translate-x-6">
-                    <div className="relative h-96 overflow-hidden rounded-[1.5rem] border p-2 pb-12 before:absolute before:inset-0 before:bg-[repeating-linear-gradient(-45deg,var(--color-border),var(--color-border)_1px,transparent_1px,transparent_6px)] before:opacity-50"></div>
-                  </div>
-                  <div className="bg-background/80 dark:bg-background/50 border-border/50 mx-auto w-80 translate-x-4 rounded-[2rem] border p-2 backdrop-blur-sm [mask-image:linear-gradient(to_bottom,#000_50%,transparent_90%)] sm:translate-x-8">
-                    <div className="bg-background/90 space-y-2 overflow-hidden rounded-[1.5rem] border p-2 shadow-xl backdrop-blur-sm dark:bg-white/5 dark:shadow-black">
-                      <AppComponent />
-                      <div className="bg-muted/80 rounded-[1rem] p-4 pb-16 dark:bg-white/5"></div>
+                  <div
+                    aria-hidden
+                    className="bg-radial from-primary/50 dark:from-primary/25 relative mx-auto mt-32 max-w-2xl to-transparent to-55% text-left">
+                    <div className="bg-background/80 border-border/50 absolute inset-0 mx-auto w-80 -translate-x-3 -translate-y-12 rounded-[2rem] border p-2 backdrop-blur-sm [mask-image:linear-gradient(to_bottom,#000_50%,transparent_90%)] sm:-translate-x-6">
+                      <div className="relative h-96 overflow-hidden rounded-[1.5rem] border p-2 pb-12 before:absolute before:inset-0 before:bg-[repeating-linear-gradient(-45deg,var(--color-border),var(--color-border)_1px,transparent_1px,transparent_6px)] before:opacity-50"></div>
                     </div>
+                    <div className="bg-background/80 dark:bg-background/50 border-border/50 mx-auto w-80 translate-x-4 rounded-[2rem] border p-2 backdrop-blur-sm [mask-image:linear-gradient(to_bottom,#000_50%,transparent_90%)] sm:translate-x-8">
+                      <div className="bg-background/90 space-y-2 overflow-hidden rounded-[1.5rem] border p-2 shadow-xl backdrop-blur-sm dark:bg-white/5 dark:shadow-black">
+                        <AppComponent />
+                        <div className="bg-muted/80 rounded-[1rem] p-4 pb-16 dark:bg-white/5"></div>
+                      </div>
+                    </div>
+                    <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] mix-blend-overlay [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] dark:opacity-5"></div>
                   </div>
-                  <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] mix-blend-overlay [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] dark:opacity-5"></div>
-                </div>
-              </AnimatedGroup>
+                </AnimatedGroup>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </ParallaxContainer>
       </main>
     </>
   );
@@ -122,8 +122,7 @@ const AppComponent = () => {
           xmlns="http://www.w3.org/2000/svg"
           width="1em"
           height="1em"
-          viewBox="0 0 32 32"
-        >
+          viewBox="0 0 32 32">
           <g fill="none">
             <path
               fill="#ff6723"
