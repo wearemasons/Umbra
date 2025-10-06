@@ -79,7 +79,7 @@ export default function MarkdownEditorPage() {
       <div className="w-full h-screen bg-white overflow-hidden">
         <Toaster />
         <Card className="w-full h-full flex flex-col border-0 rounded-none">
-          <CardHeader className="shrink-0 px-6 py-4">
+          <CardHeader className="shrink-0 px-6 h-[10vh]">
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
               <div>
                 <CardTitle className="text-2xl">
@@ -98,8 +98,8 @@ export default function MarkdownEditorPage() {
               </div>
             </div>
           </CardHeader>
-          <CardContent className="flex-1 flex flex-col min-h-0 overflow-hidden px-6 pb-6">
-            <div className="flex flex-wrap gap-4 mb-4 shrink-0">
+          <CardContent className="flex-1 flex flex-col min-h-0 h-[90vh] px-6">
+            <div className="flex flex-wrap gap-4 mb-4 shrink-0 h-[5vh]">
               <Button variant="outline" size="sm" onClick={insertHeading}>
                 Heading
               </Button>
@@ -123,8 +123,8 @@ export default function MarkdownEditorPage() {
               </Button>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 flex-1 min-h-0 overflow-hidden">
-              <div className="space-y-2 flex flex-col h-full">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 gap-4flex-1 h-[70vh] overflow-hidden">
+              <div className="space-y-2 flex flex-col max-h-[65vh]">
                 <Label>Editor</Label>
                 <Textarea
                   ref={textareaRef}
@@ -134,7 +134,7 @@ export default function MarkdownEditorPage() {
                   placeholder="Enter your markdown here..."
                 />
               </div>
-              <div className="space-y-2 w-full flex flex-col h-full">
+              <div className="space-y-2 w-full flex flex-col max-h-[65vh]">
                 <Label>Preview</Label>
                 <div className="border rounded-lg p-4 overflow-y-auto flex-1 min-h-0">
                   <ReactMarkdown
@@ -219,7 +219,7 @@ export default function MarkdownEditorPage() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t">
+            <div className="flex flex-wrap gap-2 mt-4 pt-4 h-[5vh] border-t">
               <Button onClick={handleSave}>
                 <Save className="h-4 w-4 mr-2" />
                 Save

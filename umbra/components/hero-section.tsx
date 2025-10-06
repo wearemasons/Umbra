@@ -40,7 +40,7 @@ export default function HeroSection() {
 
       <main className="overflow-hidden [--color-primary-foreground:var(--color-white)] [--color-primary:var(--color-green-600)]">
         <ParallaxContainer
-          speed={0.3} // Background moves slower
+          speed={0.7} // Background moves slower
           className="relative"
           backgroundUrl="/umbra.png"
         >
