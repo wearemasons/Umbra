@@ -31,7 +31,8 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # env files (can opt-in for committing if needed)
-.env*
+.env
+.env.local
 
 # vercel
 .vercel
@@ -40,5 +41,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# clerk configuration (can include secrets)
-/.clerk/
+# Ignored for the template, you probably want to remove it:
+package-lock.json
+pnpm-lock.yaml
