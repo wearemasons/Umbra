@@ -1,16 +1,12 @@
 'use client';
-
 import { Authenticated, Unauthenticated } from 'convex/react';
-// import { useAuth } from '@workos-inc/authkit-nextjs/components';
-// import type { User } from '@workos-inc/node';
 import { SendHorizonal } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { TextEffect } from '@/components/ui/text-effect';
 import { AnimatedGroup } from '@/components/ui/animated-group';
 import { HeroHeader } from './header';
-import ParallaxContainer from '@/components/ui/parallax-container';
 import Link from 'next/link';
-
+import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
 const transitionVariants = {
   item: {
     hidden: {
@@ -30,27 +26,20 @@ const transitionVariants = {
     },
   },
 } as const;
-
 export default function HeroSection() {
-  // const { user, signOut } = useAuth();
-
   return (
     <>
       <HeroHeader />
-
-      <main className="overflow-hidden [--color-primary-foreground:var(--color-white)] [--color-primary:var(--color-green-600)]">
-        <ParallaxContainer
-          speed={0.7} // Background moves slower
-          className="relative"
-          backgroundUrl="/umbra.png"
-        >
+      <ParallaxProvider>
+        <main className="overflow-hidden relative [--color-primary-foreground:var(--color-white)] [--color-primary:var(--color-green-600)]">
           <section className="relative min-h-screen">
-            {/* Background image with blur */}
-            {/* <div
+            <Parallax
+              speed={-200}
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-              style={{ backgroundImage: "url(/umbra.png)" }}>
-              <div className="absolute inset-0 backdrop-blur-sm bg-black/40"></div>
-            </div> */}
+              style={{ backgroundImage: 'url(/umbra.png)' }}
+            >
+              <div className="absolute inset-0 backdrop-blur-sm bg-black/40" />
+            </Parallax>
 
             <div className="relative mx-auto max-w-7xl px-6 pb-20 pt-48 lg:pt-64">
               <div className="relative z-10 mx-auto max-w-4xl text-center mt-16 lg:mt-24">
@@ -72,7 +61,6 @@ export default function HeroSection() {
                 >
                   Connecting 50 Years of Space Biology Research, From Fragmented Papers to Connected Insights
                 </TextEffect>
-
                 <AnimatedGroup
                   variants={{
                     container: {
@@ -111,7 +99,6 @@ export default function HeroSection() {
                       </Button>
                     </Unauthenticated>
                   </div>
-
                   <div
                     aria-hidden
                     className="bg-radial from-primary/50 dark:from-primary/25 relative mx-auto mt-32 max-w-2xl to-transparent to-55% text-left"
@@ -131,8 +118,8 @@ export default function HeroSection() {
               </div>
             </div>
           </section>
-        </ParallaxContainer>
-      </main>
+        </main>
+      </ParallaxProvider>
     </>
   );
 }
