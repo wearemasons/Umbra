@@ -59,9 +59,11 @@ const data = {
 };
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
-  const { user,signOut } = useAuth();
+  const { user, signOut } = useAuth();
   const userData = {
-    name: `${user?.firstName ? user?.firstName + ' ' + user?.lastName : 'Demo User'}`,
+    name: user?.lastName
+      ? `${user?.firstName ? user?.firstName + ' ' + user?.lastName : 'Demo User'}`
+      : `${user?.firstName}`,
     email: user?.email || 'demo@wearemasons.com',
     avatar: user?.profilePictureUrl || ``,
   };
@@ -75,7 +77,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <NavProjects />
       </SidebarContent>
       <SidebarFooter>
-        <NavUser user={userData} onSignOut={signOut}/>
+        <NavUser user={userData} onSignOut={signOut} />
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>
