@@ -110,7 +110,7 @@ export const HeroHeader = () => {
                     size="sm"
                     className={cn(isScrolled && 'lg:hidden')}
                   >
-                    <span>Sign out</span>
+                      <span>Sign out</span>
                   </Button>
 
                   <Button
